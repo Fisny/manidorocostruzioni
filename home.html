@@ -13,34 +13,36 @@
 </head>
 <body>
     <!-- NAV -->
-    <header class="sticky">
-        <div class="container" style="display:flex;align-items:center;gap:16px;padding:12px 0;">
-            <a href="#hero" style="display:flex;align-items:center;gap:12px;flex:1">
-
-                <div class="brand-mark">
-                    <img class="logo logo-dark"
-                         src="img/logo-white.png"
-                         alt="Mani d’oro costruzioni (dark)" width="22" height="22" />
-                </div>
-
-                <div class="logo-text">
-                    <b class="md-h">Mani d’oro</b>
-                    <span class="red">costruzioni</span>
-                </div>
-            </a>
-
-            <nav>
-                <div class="menu">
-                    <a href="#servizi">Servizi</a>
-                    <a href="#portfolio">Progetti</a>
-                    <a href="#processo">Metodo</a>
-                    <a href="#chi-siamo">Chi siamo</a>
-                    <a href="#contatti">Contatti</a>
-                </div>
-            </nav>
-            <button id="toggleTheme" class="btn ghost subtitle" aria-label="Cambia tema">🌓 <span style="font-size:12px">Tema</span></button>
+    <header class="sticky" role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:12px;padding:12px 0;position:relative">
+        <a href="#hero" style="display:flex;align-items:center;gap:12px;flex:1" aria-label="Torna all'inizio">
+        <div class="brand-mark">
+            <img class="logo logo-dark" src="img/logo-white.png" alt="Mani d’oro costruzioni" width="22" height="22" />
         </div>
+        <div class="logo-text">
+            <b class="md-h">Mani d’oro</b>
+            <span class="red">costruzioni</span>
+        </div>
+        </a>
+
+        <button id="toggleTheme" class="btn ghost subtitle" aria-label="Cambia tema">🌓 <span style="font-size:12px">Tema</span></button>
+
+        <button id="navToggle" class="btn ghost subtitle mobile-only"
+                aria-label="Apri menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+
+        <!-- MENU -->
+        <nav id="navMenu" aria-label="Principale">
+        <ul class="menu">
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#portfolio">Progetti</a></li>
+            <li><a href="#processo">Metodo</a></li>
+            <li><a href="#chi-siamo">Chi siamo</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+        </nav>
+    </div>
     </header>
+
 
     <!-- HERO -->
     <section id="hero" class="hero">      
@@ -80,11 +82,10 @@
                 <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Cosa facciamo</h2>
                 <p class="subtitle" style="max-width:60ch">Dal piccolo intervento alla ristrutturazione completa: squadre interne, selezione materiali e gestione pratiche.</p>
             </div>
-            <div class="grid cols-4" style="margin-top:26px">
-                <div class="card feature reveal ring"><div class="icon">🔨</div><div><div class="title" style="font-size:18px">Ristrutturazioni chiavi in mano</div><div class="subtitle">Appartamenti, uffici e negozi: dalla progettazione alla consegna.</div></div></div>
-                <div class="card feature reveal ring"><div class="icon">📐</div><div><div class="title" style="font-size:18px">Progettazione & Direzione lavori</div><div class="subtitle">Collaborazione con studi tecnici, computi metrici e pratiche edilizie.</div></div></div>
+            <div class="grid cols-3" style="margin-top:26px">
                 <div class="card feature reveal ring"><div class="icon">🏢</div><div><div class="title" style="font-size:18px">Nuove costruzioni</div><div class="subtitle">Soluzioni strutturali e finiture di pregio per residenziale e commerciale.</div></div></div>
-                <div class="card feature reveal ring"><div class="icon">⛑️</div><div><div class="title" style="font-size:18px">Manutenzioni e pronto intervento</div><div class="subtitle">Rapidità e sicurezza per condomìni e amministratori.</div></div></div>
+                <div class="card feature reveal ring"><div class="icon">🔨</div><div><div class="title" style="font-size:18px">ristrutturazione, ripristino e riqualificazione</div><div class="subtitle">Appartamenti, uffici e negozi: dalla progettazione alla consegna.</div></div></div>
+                <div class="card feature reveal ring"><div class="icon">📐</div><div><div class="title" style="font-size:18px">Ripristino terreni a fasce </div><div class="subtitle">In collaborazione con studi tecnici per progetti, computi e pratiche edilizie.</div></div></div>
             </div>
         </div>
     </section>
@@ -93,7 +94,7 @@
     <section id="portfolio">
         <div class="container">
             <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
-                <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Progetti selezionati</h2>
+                <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Progetti</h2>
                 <a href="#contatti" class="subtitle" style="font-size:14px;color:var(--brand)">Vuoi un progetto simile?</a>
             </div>
             <div class="grid cols-3" style="margin-top:26px">
@@ -184,6 +185,12 @@
                     <li>✔️ Assicurazione RCT/RCO</li>
                     <li>✔️ Fornitori e materiali selezionati</li>
                     <li>✔️ Un referente unico di cantiere</li>
+                    <li>✔️ Maestranze proprie</li>
+                    <li>✔️ Forniture qualificate</li>
+                    <li>✔️ Lavori chiavi in mano</li>
+                    <li>✔️ Professionisti a disposizione</li>
+                    <li>✔️ Consulenza<ul><li>Nuova</li><li>Esistente</li><li>Interventi di ripristino</li></ul></li>
+                    <li>✔️ Interventi in emergenza</li>
                 </ul>
             </div>
             <div class="grid cols-2">
@@ -283,22 +290,50 @@
     </footer>
 
     <script>
-
-        // Dark/Light toggle con persistenza
         const root = document.documentElement;
         const saved = localStorage.getItem('theme');
-        if(saved === 'dark'){ root.classList.add('dark'); }
-        document.getElementById('toggleTheme').addEventListener('click',()=>{
-          root.classList.toggle('dark');
-          localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+        if (saved === 'dark') { root.classList.add('dark'); }
+        document.getElementById('toggleTheme')?.addEventListener('click', () => {
+            root.classList.toggle('dark');
+            localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        const io = new IntersectionObserver((entries)=>{
-          for(const e of entries){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }
-        },{threshold:0.15});
-        document.querySelectorAll('.reveal, .work').forEach(el=>io.observe(el));
+        const io = new IntersectionObserver((entries) => {
+            for (const e of entries) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal, .work').forEach(el => io.observe(el));
+        document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        function closeNav() {
+            navMenu?.classList.remove('open');
+            navToggle?.setAttribute('aria-expanded', 'false');
+            document.querySelectorAll('.has-dropdown.open').forEach(li => li.classList.remove('open'));
+            document.querySelectorAll('.drop-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+        }
+
+        navToggle?.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        document.querySelectorAll('.drop-trigger').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+            const li = e.currentTarget.closest('.has-dropdown');
+            const open = li.classList.toggle('open');
+            e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu?.contains(e.target) && !navToggle?.contains(e.target)) closeNav();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
+
+        document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', closeNav));
+</script>
+
 </body>
 </html>

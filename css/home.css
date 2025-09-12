@@ -35,6 +35,99 @@ html {
   }
 }
 
+/* --- NAV responsive additions --- */
+.mobile-only { display: none; }
+
+/* elementi del menu */
+#navMenu .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+#navMenu .menu > li > a,
+#navMenu .drop-trigger {
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+#navMenu .menu > li > a:hover,
+#navMenu .drop-trigger:hover { background: var(--card); }
+#navToggle{
+    display: none;
+    cursor: pointer;
+}
+/* Dropdown */
+.has-dropdown { position: relative; }
+.drop-trigger {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 220px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 6px;
+  display: none;
+  box-shadow: 0 12px 30px rgba(2,6,23,.10);
+  z-index: 20;
+}
+.dropdown a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.dropdown a:hover { background: var(--card); }
+
+ @media (hover:hover) and (min-width: 860px) {
+  .has-dropdown:hover > .dropdown { display: block; }
+}
+
+/* Mobile layout */
+@media (max-width: 860px) {
+  .mobile-only { display: inline-flex; }
+    #navToggle{ display: block;}
+  /* il tuo CSS nasconde .menu su mobile: qui lo mostriamo quando il nav è "open" */
+  #navMenu {
+    position: absolute;
+    right: 12px;
+    left: 12px;
+    top: 68px;
+    display: none;
+  }
+  #navMenu.open { display: block; }
+
+  #navMenu .menu {
+    display: grid;            /* a griglia su mobile */
+    gap: 20px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding:20px 10px;
+    box-shadow: 0 16px 40px rgba(2,6,23,.12);
+  }
+
+  /* Dropdown: incolonnato nello stesso pannello */
+  .has-dropdown { position: static; }
+  .has-dropdown .dropdown {
+    position: static;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 4px 0 0 12px;
+    display: none; /* chiuso di default */
+  }
+  .has-dropdown.open .dropdown { display: block; }
+}
+
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
