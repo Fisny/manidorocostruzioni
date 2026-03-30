@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="it">
 <head>
     <meta charset="utf-8" />
@@ -7,68 +7,76 @@
     <meta name="description" content="Mani d’oro costruzioni: impresa edile a Genova di Troci Florin." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet" />
-
 </head>
 <body>
     <!-- NAV -->
     <header class="sticky" role="banner">
-    <div class="container" style="display:flex;align-items:center;gap:12px;padding:12px 0;position:relative">
-        <a href="#hero" style="display:flex;align-items:center;gap:12px;flex:1" aria-label="Torna all'inizio">
-        <div class="brand-mark">
-            <img class="logo logo-dark" src="img/logo-white.png" alt="Mani d’oro costruzioni" width="22" height="22" />
+        <div class="container nav-wrap">
+            <a href="#hero" class="brand-link" aria-label="Torna all'inizio">
+                <div class="brand-mark">
+                    <img class="logo logo-dark" src="img/logo-white.png" alt="Mani d’oro costruzioni" width="22" height="22" />
+                </div>
+                <div class="logo-text">
+                    <b class="md-h gold">Mani d’oro</b>
+                    <span class="red">costruzioni</span>
+                </div>
+            </a>
+
+            <button id="toggleTheme" class="btn ghost subtitle" aria-label="Cambia tema">🌓 <span class="theme-label">Tema</span></button>
+
+            <button id="navToggle" class="btn ghost subtitle mobile-only"
+                    aria-label="Apri menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+
+            <nav id="navMenu" aria-label="Principale">
+                <ul class="menu">
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#portfolio">Progetti</a></li>
+                    <li><a href="#processo">Metodo</a></li>
+                    <li><a href="#chi-siamo">Chi siamo</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="logo-text">
-            <b class="md-h">Mani d’oro</b>
-            <span class="red">costruzioni</span>
-        </div>
-        </a>
-
-        <button id="toggleTheme" class="btn ghost subtitle" aria-label="Cambia tema">🌓 <span style="font-size:12px">Tema</span></button>
-
-        <button id="navToggle" class="btn ghost subtitle mobile-only"
-                aria-label="Apri menu" aria-expanded="false" aria-controls="navMenu">☰</button>
-
-        <!-- MENU -->
-        <nav id="navMenu" aria-label="Principale">
-        <ul class="menu">
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#portfolio">Progetti</a></li>
-            <li><a href="#processo">Metodo</a></li>
-            <li><a href="#chi-siamo">Chi siamo</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-        </ul>
-        </nav>
-    </div>
     </header>
 
-
     <!-- HERO -->
-    <section id="hero" class="hero">      
-        <div class="container hero-grid">            
+    <section id="hero" class="hero">
+        <div class="container hero-grid">
             <div>
-                <div class="subtitle" style="text-transform:uppercase;letter-spacing:.2em;font-size:12px;display:flex;align-items:center;gap:8px">
+                <div class="subtitle hero-topline">
                     <span class="badge">Dal 2007 a Genova</span>
                 </div>
-                <h1 class="title" style="font-size:clamp(32px,4.4vw,54px);line-height:1.08;margin:.5em 0 .2em">Ristrutturazioni e costruzioni <span style="color:var(--brand)">di qualità</span>.</h1>
-                <p class="subtitle" style="max-width:60ch">Specializzati in ristrutturazioni chiavi in mano, nuove costruzioni e manutenzioni. Tempi certi, finiture eccellenti, unico referente, Troci Florin.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px">
+
+                <h1 class="title hero-title">
+                    Ristrutturazioni e costruzioni <span class="accent-text">di qualità</span>.
+                </h1>
+
+                <p class="subtitle hero-copy">
+                    Specializzati in ristrutturazioni chiavi in mano, nuove costruzioni, murature tradizionali e manutenzioni.
+                    Tempi certi, finiture curate e un unico referente: <strong>Troci Florin</strong>.
+                </p>
+
+                <div class="hero-actions">
                     <a href="#contatti" class="btn primary">📞 Richiedi un sopralluogo</a>
                     <a href="#portfolio" class="btn ghost">🏗️ Guarda i progetti</a>
                 </div>
-                <div class="kpis" style="margin-top:16px">
+
+                <div class="kpis">
                     <div>✅ Preventivi chiari</div>
-                    <div>✅ Tempi garantiti</div>
+                    <div>✅ Tempi concordati</div>
                     <div>✅ Unico referente</div>
                 </div>
             </div>
+
             <div class="reveal">
-                <div class="card bleed ring shadow-xl" style="padding:0px !important;">
+                <div class="card bleed ring shadow-xl no-pad">
                     <img src="/img/WhatsApp%20Image%202026-03-26%20at%207.37.46%20AM.jpeg" alt="Cantiere e squadra edile" />
                 </div>
-                <div class="card tight shadow-lg" style="position:relative;top:-18px;max-width:360px">
-                    <div class="subtitle" style="text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--brand)">Certificazioni</div>
+
+                <div class="card tight shadow-lg cert-card">
+                    <div class="subtitle cert-title">Certificazioni</div>
                     <div>DURC • DVR • Sicurezza cantieri</div>
                 </div>
             </div>
@@ -78,14 +86,43 @@
     <!-- SERVIZI -->
     <section id="servizi" class="section-border">
         <div class="container">
-            <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
-                <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Cosa facciamo</h2>
-                <p class="subtitle" style="max-width:60ch">Dal piccolo intervento alla ristrutturazione completa: squadre interne, selezione materiali e gestione pratiche.</p>
+            <div class="section-head">
+                <h2 class="title section-title">Cosa facciamo</h2>
+                <p class="subtitle section-copy">
+                    Dal piccolo intervento alla ristrutturazione completa: maestranze qualificate, selezione materiali e gestione coordinata del lavoro.
+                </p>
             </div>
-            <div class="grid cols-3" style="margin-top:26px">
-                <div class="card feature reveal ring"><div class="icon">🏢</div><div><div class="title" style="font-size:18px">Nuove costruzioni</div><div class="subtitle">Soluzioni strutturali e finiture di pregio per residenziale e commerciale.</div></div></div>
-                <div class="card feature reveal ring"><div class="icon">🔨</div><div><div class="title" style="font-size:18px">ristrutturazione, ripristino e riqualificazione</div><div class="subtitle">Appartamenti, uffici e negozi: dalla progettazione alla consegna.</div></div></div>
-                <div class="card feature reveal ring"><div class="icon">📐</div><div><div class="title" style="font-size:18px">Realizzazione muri di pietra a secco a regola d'arte </div><div class="subtitle">In collaborazione con studi tecnici per progetti, computi e pratiche edilizie.</div></div></div>
+
+            <div class="grid cols-3 service-grid">
+                <div class="card feature reveal ring">
+                    <div class="icon">🏢</div>
+                    <div>
+                        <div class="title feature-title">Nuove costruzioni</div>
+                        <div class="subtitle">
+                            Soluzioni strutturali e finiture di pregio per edilizia residenziale e commerciale.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card feature reveal ring">
+                    <div class="icon">🔨</div>
+                    <div>
+                        <div class="title feature-title">Ristrutturazione, ripristino e riqualificazione</div>
+                        <div class="subtitle">
+                            Appartamenti, uffici e negozi: interventi curati dalla fase iniziale fino alla consegna finale.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card feature reveal ring">
+                    <div class="icon">🪨</div>
+                    <div>
+                        <div class="title feature-title">Muri di pietra a secco e opere murarie</div>
+                        <div class="subtitle">
+                            Realizzazione di muri di pietra a secco e murature tradizionali con attenzione a posa, stabilità, drenaggio e resa estetica.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -93,69 +130,75 @@
     <!-- PORTFOLIO -->
     <section id="portfolio">
         <div class="container">
-            <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
-                <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Progetti</h2>
-                <a href="#contatti" class="subtitle" style="font-size:14px;color:var(--brand)">Vuoi un progetto simile?</a>
+            <div class="section-head">
+                <h2 class="title section-title">Progetti</h2>
+                <a href="#contatti" class="subtitle section-link">Vuoi un progetto simile?</a>
             </div>
+
             <div class="grid cols-3" style="margin-top:26px">
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Attico in centro – Genova" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Attico in centro – Genova</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Ristrutturazione completa</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Attico in centro – Genova</div>
+                            <div class="subtitle work-subtitle">Ristrutturazione completa</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
+
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Facciata storica" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Facciata storica</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Restauro conservativo</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Facciata storica</div>
+                            <div class="subtitle work-subtitle">Restauro conservativo</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
+
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Showroom minimal" src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Showroom minimal</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Commerciale</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Showroom minimal</div>
+                            <div class="subtitle work-subtitle">Commerciale</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
+
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Villa con piscina" src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Villa con piscina</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Nuova costruzione</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Villa con piscina</div>
+                            <div class="subtitle work-subtitle">Nuova costruzione</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
+
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Loft industrial" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Loft industrial</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Interior design</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Loft industrial</div>
+                            <div class="subtitle work-subtitle">Interior design</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
+
                 <figure class="work ring reveal shadow-lg">
                     <img alt="Copertura e tetto" src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop">
                     <figcaption class="work-meta">
-                        <div class="indedx100">
-                            <div class="title" style="color:#fff">Copertura e tetto</div>
-                            <div class="subtitle" style="color:#e2e8f0;font-size:12px">Manutenzione straordinaria</div>
+                        <div class="indexed100">
+                            <div class="title white-text">Copertura e tetto</div>
+                            <div class="subtitle work-subtitle">Manutenzione straordinaria</div>
                         </div>
-                        <span class="pill indedx100">Dettagli</span>
+                        <span class="pill indexed100">Dettagli</span>
                     </figcaption>
                 </figure>
             </div>
@@ -165,23 +208,52 @@
     <!-- PROCESSO -->
     <section id="processo" class="section-border">
         <div class="container">
-            <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Il nostro metodo</h2>
-            <div class="grid cols-4" style="margin-top:26px">
-                <div class="card reveal ring"><div class="step-num">1</div><h3 class="title" style="margin:.6rem 0 .2rem;font-size:18px">Sopralluogo</h3><p class="subtitle">Analisi esigenze, rilievi e valutazione tecnica.</p></div>
-                <div class="card reveal ring"><div class="step-num">2</div><h3 class="title" style="margin:.6rem 0 .2rem;font-size:18px">Progetto & Preventivo</h3><p class="subtitle">Proposta dettagliata, materiali e timeline.</p></div>
-                <div class="card reveal ring"><div class="step-num">3</div><h3 class="title" style="margin:.6rem 0 .2rem;font-size:18px">Esecuzione lavori</h3><p class="subtitle">Squadre qualificate, sicurezza e qualità.</p></div>
-                <div class="card reveal ring"><div class="step-num">4</div><h3 class="title" style="margin:.6rem 0 .2rem;font-size:18px">Consegna & Assistenza</h3><p class="subtitle">Collaudo finale e supporto post-intervento.</p></div>
+            <h2 class="title section-title">Il nostro metodo</h2>
+
+            <div class="grid cols-5 process-grid">
+                <div class="card reveal ring">
+                    <div class="step-num">1</div>
+                    <h3 class="title process-title">Sopralluogo</h3>
+                    <p class="subtitle">Analisi esigenze, rilievi sul posto e prima valutazione tecnica dell’intervento.</p>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="step-num">2</div>
+                    <h3 class="title process-title">Progetto & Preventivo</h3>
+                    <p class="subtitle">Proposta dettagliata con lavorazioni previste, materiali consigliati e tempi di esecuzione.</p>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="step-num">3</div>
+                    <h3 class="title process-title">Esecuzione lavori</h3>
+                    <p class="subtitle">Squadre qualificate, attenzione alla sicurezza, ordine di cantiere e qualità esecutiva.</p>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="step-num">4</div>
+                    <h3 class="title process-title">Murature in pietra</h3>
+                    <p class="subtitle">Realizzazione di muri di pietra a secco e opere murarie tradizionali con cura di posa, stabilità e drenaggio.</p>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="step-num">5</div>
+                    <h3 class="title process-title">Consegna & Assistenza</h3>
+                    <p class="subtitle">Verifica finale del lavoro eseguito e supporto anche dopo la conclusione dell’intervento.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CHI SIAMO -->
     <section id="chi-siamo">
-        <div class="container" style="display:grid;gap:34px;align-items:center">
+        <div class="container chi-grid">
             <div>
-                <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Chi siamo</h2>
-                <p class="subtitle" style="margin-top:.6rem;max-width:65ch">Impresa di Genova con squadre interne specializzate. Trasparenza, sicurezza e finiture di qualità per privati, amministratori e condomìni.</p>
-                <ul class="subtitle" style="margin:1rem 0 0 0;display:grid;gap:.55rem">
+                <h2 class="title section-title">Chi siamo</h2>
+                <p class="subtitle about-copy">
+                    Impresa di Genova con squadre interne specializzate. Trasparenza, sicurezza e finiture di qualità per privati, amministratori e condomìni.
+                </p>
+
+                <ul class="subtitle about-list">
                     <li>✔️ Assicurazione RCT/RCO</li>
                     <li>✔️ Fornitori e materiali selezionati</li>
                     <li>✔️ Un referente unico di cantiere</li>
@@ -189,34 +261,57 @@
                     <li>✔️ Forniture qualificate</li>
                     <li>✔️ Lavori chiavi in mano</li>
                     <li>✔️ Professionisti a disposizione</li>
-                    <li>✔️ Consulenza<ul><li>Nuova</li><li>Esistente</li><li>Interventi di ripristino</li></ul></li>
+                    <li>
+                        ✔️ Consulenza
+                        <ul>
+                            <li>Nuova realizzazione</li>
+                            <li>Edilizia esistente</li>
+                            <li>Interventi di ripristino</li>
+                        </ul>
+                    </li>
                     <li>✔️ Interventi in emergenza</li>
                 </ul>
             </div>
+
             <div class="grid cols-2">
-                <div class="card bleed ring reveal shadow-lg" style="margin-top:26px;padding:0px !important;">
+                <div class="card bleed ring reveal shadow-lg media-card">
                     <img class="same-height"
                          src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?q=80&w=1400&auto=format&fit=crop"
                          alt="Dettagli di cantiere" />
                 </div>
-                <div class="card bleed ring reveal shadow-lg" style="margin-top:26px;padding:0px !important;">
+
+                <div class="card bleed ring reveal shadow-lg media-card">
                     <img class="same-height"
                          src="https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?q=80&w=1400&auto=format&fit=crop"
                          alt="Strumenti e misure" />
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- TESTIMONIANZE -->
-    <section style="background:var(--card)">
+    <section class="testimonial-section">
         <div class="container">
-            <h2 class="title" style="font-size:clamp(24px,3.2vw,36px)">Cosa dicono di noi</h2>
+            <h2 class="title section-title">Cosa dicono di noi</h2>
+
             <div class="grid cols-3" style="margin-top:26px">
-                <div class="card reveal ring"><div class="quote">❝</div><p style="margin-top:.6rem">Professionalità impeccabile e tempi rispettati al giorno!</p><div class="subtitle" style="margin-top:.6rem;font-size:14px">Bardi F. • Condominio Sampierdarena</div></div>
-                <div class="card reveal ring"><div class="quote">❝</div><p style="margin-top:.6rem">Ristrutturazione completa senza stress: risultato oltre le aspettative.</p><div class="subtitle" style="margin-top:.6rem;font-size:14px">Cesare R. • Privato</div></div>
-                <div class="card reveal ring"><div class="quote">❝</div><p style="margin-top:.6rem">Ottimo coordinamento con il nostro studio tecnico.</p><div class="subtitle" style="margin-top:.6rem;font-size:14px">Ing. P. Ferri • Studio Ferri</div></div>
+                <div class="card reveal ring">
+                    <div class="quote">❝</div>
+                    <p class="testimonial-text">Professionalità impeccabile e tempi rispettati al giorno.</p>
+                    <div class="subtitle testimonial-author">Bardi F. • Condominio Sampierdarena</div>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="quote">❝</div>
+                    <p class="testimonial-text">Ristrutturazione completa senza stress: risultato oltre le aspettative.</p>
+                    <div class="subtitle testimonial-author">Cesare R. • Privato</div>
+                </div>
+
+                <div class="card reveal ring">
+                    <div class="quote">❝</div>
+                    <p class="testimonial-text">Ottimo coordinamento con il nostro studio tecnico.</p>
+                    <div class="subtitle testimonial-author">Ing. P. Ferri • Studio Ferri</div>
+                </div>
             </div>
         </div>
     </section>
@@ -225,73 +320,82 @@
     <section id="contatti">
         <div class="container contact-grid">
             <div class="card ring shadow-lg contact-card">
-                <h2 class="title" style="font-size:clamp(24px,3.2vw,32px)">Parliamo del tuo progetto</h2>
-                <p class="subtitle" style="margin:.5rem 0 1rem">
+                <h2 class="title contact-title">Parliamo del tuo progetto</h2>
+                <p class="subtitle contact-copy">
                     Sopralluogo gratuito e preventivo dettagliato. Rispondiamo entro 24 ore.
                 </p>
 
                 <div class="contact-list">
-                     <div class="card tight ring contact-item">
-                        <span>📞</span>
-                        <a href="tel:+393204472955" aria-label="Chiama +39 320 447 2955">
-                        <strong>+39 320 447 2955</strong>
-                        </a>
-                    </div>
                     <div class="card tight ring contact-item">
-                        <span>📞</span>
-                        <a href="tel:+393204472955" aria-label="Chiama +39 327 2868 240">
-                        <strong>+39 327 2868 240</strong>
-                        </a>
-                    </div>
-
-                     <div class="card tight ring contact-item">
-                        <span>✉️</span>
-                        <a href="mailto:flo007@hotmail.it?subject=Richiesta%20preventivo" aria-label="Scrivi a flo007@hotmail.it">
-                        flo007@hotmail.it
-                        </a>
-                    </div>
-
-                     <div class="card tight ring contact-item" style="grid-column:1/-1">
-                        <span>📍</span>
-                        <span>
-                        <a
-                            href="https://www.google.com/maps?q=Corso+Luigi+Andrea+Martinetti+38,+16149+Genova+GE"
-                            target="_blank" rel="noopener"
-                            aria-label="Apri l'indirizzo in Google Maps"
-                        >
-                            Corso Luigi Andrea Martinetti 38, <br>16149 Genova GE
-                        </a>
-                        <br>
-                        <small>
-                            <a
-                            href="https://maps.apple.com/?q=Corso%20Luigi%20Andrea%20Martinetti%2038,%2016149%20Genova%20GE"
-                            target="_blank" rel="noopener"
-                            aria-label="Apri mappa"
-                            >
-                            Apri in mappe
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <div class="contact-name">Flori</div>
+                            <a href="tel:+393204472955" aria-label="Chiama Flori al +39 320 447 2955">
+                                <strong>+39 320 447 2955</strong>
                             </a>
-                        </small>
+                        </div>
+                    </div>
+
+                    <div class="card tight ring contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <div class="contact-name">Labi</div>
+                            <a href="tel:+393272868240" aria-label="Chiama Labi al +39 327 2868 240">
+                                <strong>+39 327 2868 240</strong>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card tight ring contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <div class="contact-name">Email</div>
+                            <a href="mailto:flo007@hotmail.it?subject=Richiesta%20preventivo" aria-label="Scrivi a flo007@hotmail.it">
+                                flo007@hotmail.it
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card tight ring contact-item full-span">
+                        <span class="contact-icon">📍</span>
+                        <span>
+                            <a
+                                href="https://www.google.com/maps?q=Corso+Luigi+Andrea+Martinetti+38,+16149+Genova+GE"
+                                target="_blank" rel="noopener"
+                                aria-label="Apri l'indirizzo in Google Maps"
+                            >
+                                Corso Luigi Andrea Martinetti 38,<br>16149 Genova GE
+                            </a>
+                            <br>
+                            <small>
+                                <a
+                                    href="https://maps.apple.com/?q=Corso%20Luigi%20Andrea%20Martinetti%2038,%2016149%20Genova%20GE"
+                                    target="_blank" rel="noopener"
+                                    aria-label="Apri mappa"
+                                >
+                                    Apri in mappe
+                                </a>
+                            </small>
                         </span>
                     </div>
                 </div>
-               
+
                 <div class="contact-actions">
-                        <a href="mailto:flo007@hotmail.it?subject=Richiesta%20preventivo"  class="btn primary">
+                    <a href="mailto:flo007@hotmail.it?subject=Richiesta%20preventivo" class="btn primary">
                         Richiedi preventivo
-                        </a>
+                    </a>
                 </div>
             </div>
 
-            <figure class="card bleed ring shadow-lg contact-media" style="padding:0px !important;">
+            <figure class="card bleed ring shadow-lg contact-media no-pad">
                 <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?q=80&w=1600&auto=format&fit=crop" alt="Cantiere" />
             </figure>
         </div>
     </section>
 
-
     <footer>
-        <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
-            <div class="subtitle" style="font-size:14px">© <span id="year"></span> Mani d’oro costruzioni • P.IVA 02087390999</div>
+        <div class="container footer-wrap">
+            <div class="subtitle footer-copy">© <span id="year"></span> Mani d’oro costruzioni • P.IVA 02087390999</div>
         </div>
     </footer>
 
@@ -299,14 +403,21 @@
         const root = document.documentElement;
         const saved = localStorage.getItem('theme');
         if (saved === 'dark') { root.classList.add('dark'); }
+
         document.getElementById('toggleTheme')?.addEventListener('click', () => {
             root.classList.toggle('dark');
             localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
         });
 
         const io = new IntersectionObserver((entries) => {
-            for (const e of entries) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }
+            for (const e of entries) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    io.unobserve(e.target);
+                }
+            }
         }, { threshold: 0.15 });
+
         document.querySelectorAll('.reveal, .work').forEach(el => io.observe(el));
         document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 
@@ -317,7 +428,7 @@
             navMenu?.classList.remove('open');
             navToggle?.setAttribute('aria-expanded', 'false');
             document.querySelectorAll('.has-dropdown.open').forEach(li => li.classList.remove('open'));
-            document.querySelectorAll('.drop-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+            document.querySelectorAll('.drop-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
         }
 
         navToggle?.addEventListener('click', () => {
@@ -327,19 +438,21 @@
 
         document.querySelectorAll('.drop-trigger').forEach(btn => {
             btn.addEventListener('click', (e) => {
-            const li = e.currentTarget.closest('.has-dropdown');
-            const open = li.classList.toggle('open');
-            e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
+                const li = e.currentTarget.closest('.has-dropdown');
+                const open = li.classList.toggle('open');
+                e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
             });
         });
 
         document.addEventListener('click', (e) => {
             if (!navMenu?.contains(e.target) && !navToggle?.contains(e.target)) closeNav();
         });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeNav();
+        });
 
         document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', closeNav));
-</script>
-
+    </script>
 </body>
 </html>
