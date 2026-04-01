@@ -393,9 +393,23 @@
         </div>
     </section>
 
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="event.stopPropagation()">
+            <button class="modal-close" type="button" aria-label="Chiudi finestra" onclick="closeModal()">✖</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    
     <footer>
         <div class="container footer-wrap">
-            <div class="subtitle footer-copy">© <span id="year"></span> Mani d’oro costruzioni • P.IVA 02087390999</div>
+            <div class="subtitle footer-copy">
+                © <span id="year"></span> Mani d’oro costruzioni • P.IVA 02087390999
+            </div>
+    
+            <div class="footer-links">
+                <a href="#" onclick="openPrivacy(); return false;">Privacy Policy</a>
+                <a href="#" onclick="openCookie(); return false;">Cookie Policy</a>
+            </div>
         </div>
     </footer>
 
@@ -453,6 +467,52 @@
         });
 
         document.querySelectorAll('#navMenu a').forEach(a => a.addEventListener('click', closeNav));
+
+        function openPrivacy() {
+            document.getElementById('modalContent').innerHTML = `
+                <h2 id="modalTitle">Privacy Policy</h2>
+        
+                <p><strong>Titolare del trattamento:</strong> Mani d’oro costruzioni</p>
+                <p><strong>Contatto:</strong> <a href="mailto:flo007@hotmail.it">flo007@hotmail.it</a></p>
+        
+                <p>Questo sito ha finalità esclusivamente informative e di presentazione dell’attività.</p>
+        
+                <p>Attraverso la normale navigazione possono essere trattati dati tecnici come indirizzo IP, informazioni sul dispositivo, browser e data/ora della richiesta, nei limiti necessari al funzionamento del sito, alla sicurezza e alla corretta erogazione dei contenuti.</p>
+        
+                <p>Il sito non contiene form di registrazione, aree riservate, sistemi di profilazione, strumenti pubblicitari o piattaforme di analytics nel codice attualmente pubblicato.</p>
+        
+                <p>Il sito utilizza alcuni servizi di terze parti per la visualizzazione di contenuti, tra cui Google Fonts e immagini ospitate su domini esterni. L’apertura di link verso Google Maps, Apple Maps, telefono ed e-mail avviene solo su azione volontaria dell’utente.</p>
+        
+                <p>I dati sono trattati per consentire la fruizione del sito, per ragioni tecniche e di sicurezza e, nei casi in cui l’utente scelga di contattare il titolare, per dare seguito alla richiesta.</p>
+        
+                <p>L’utente può esercitare i diritti previsti dalla normativa applicabile in materia di protezione dei dati personali, nei limiti e con le modalità previste dalla legge, contattando il titolare ai recapiti sopra indicati.</p>
+            `;
+            document.getElementById('modalOverlay').classList.add('active');
+            document.getElementById('modalOverlay').setAttribute('aria-hidden', 'false');
+        }
+
+        function openCookie() {
+            document.getElementById('modalContent').innerHTML = `
+                <h2 id="modalTitle">Cookie Policy</h2>
+        
+                <p>Questo sito utilizza esclusivamente strumenti tecnici necessari al corretto funzionamento delle pagine e alla fruizione dei contenuti.</p>
+        
+                <p>Nel codice del sito non sono presenti cookie di profilazione, strumenti pubblicitari o sistemi di analisi del traffico come Google Analytics.</p>
+        
+                <p>Il sito utilizza servizi tecnici di terze parti per la visualizzazione di alcuni contenuti, in particolare Google Fonts e immagini caricate da domini esterni.</p>
+        
+                <p>I link verso Google Maps, Apple Maps, telefono ed e-mail attivano servizi esterni solo su iniziativa dell’utente, al momento del click.</p>
+        
+                <p>Per i soli cookie tecnici e strumenti equivalenti non è richiesto il consenso, ma resta l’obbligo dell’informativa.</p>
+            `;
+            document.getElementById('modalOverlay').classList.add('active');
+            document.getElementById('modalOverlay').setAttribute('aria-hidden', 'false');
+        }
+        
+        function closeModal(e) {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.getElementById('modalOverlay').setAttribute('aria-hidden', 'true');
+        }
     </script>
 </body>
 </html>
